@@ -28,224 +28,218 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM:
-## index.html:
 ```
+
+html code
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Lemon</title>
-    <link rel="stylesheet" href="rest.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Little Lemon Restaurant</title>
+    <meta name="description" content="Enjoy delicious dishes at Little Lemon.">
+    <meta name="author" content="Little Lemon Team">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
+
+    <!-- Header section -->
     <header>
         <div class="logo">
-            <!-- Updated to show only the image -->
-            <img src="logo.jpeg" alt="Little Lemon Logo">
+           
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Book</a></li>
-                <li><a href="#">About</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main content section -->
     <main>
         <!-- Promotional Banner -->
-        <section class="promo-banner">
-            <h2>30% Off This Weekend</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et congue massa, eu fringilla mauris.</p>
+        <section class="promo">
+            <h1>Welcome to Little Lemon</h1>
+            <p>Your favorite place for unforgettable flavors!</p>
+            <p>Explore a fusion of delightful vegetarian and non-vegetarian dishes crafted to satisfy every palate. Discover starters and snacks bursting with flavor and enjoy a dining experience like no other!</p>
         </section>
 
-        <!-- Content Columns -->
-        <section class="content-columns">
+        <!-- Three columns section -->
+        <section class="three-columns">
             <article class="column">
-                <h3>Our New Menu</h3>
-                <img src="bbq.jpeg" alt="New Menu">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et congue massa, eu fringilla mauris.</p>
-                <a href="#">See our new menu</a>
+                <h2>Starters & Snacks</h2>
+                <img src="73.jpg" alt="Starters and Snacks">
+                <p>Begin your culinary journey with our irresistible appetizers, perfect for every occasion.</p>
             </article>
-
             <article class="column">
-                <h3>Book a Table</h3>
-                <img src="pasta.jpeg" alt="Book a Table">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et congue massa, eu fringilla mauris.</p>
-                <a href="#">Book your table now</a>
+                <h2>Vegetarian Delights</h2>
+                <img src="74.jpg" alt="Vegetarian Dishes">
+                <p>Celebrate nature's best with vibrant, plant-based meals that nourish and satisfy.</p>
             </article>
-
             <article class="column">
-                <h3>Opening Hours</h3>
-                <img src="chef(1).jpeg" alt="Opening Hours">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et congue massa, eu fringilla mauris.</p>
-                <p>Mon - Fri: 2pm - 10pm<br>Sat: 2pm - 11pm<br>Sun: 2pm - 9pm</p>
+                <h2>Non-Vegetarian Treats</h2>
+                <img src="75.jpg" alt="Non-Vegetarian Dishes">
+                <p>Enjoy bold, savory flavors with our expertly crafted non-vegetarian dishes.</p>
             </article>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer section -->
     <footer>
-        <div class="footer-logo">
-            <img src="small logo.jpeg" alt="Little Lemon Logo">
+        <div class="footer-left">
+            
         </div>
-        <div class="footer-text">
-            <p>© 2024 Little Lemon</p>
+        <div class="footer-right">
+            <p>Designed and Developed by Jawahar</p>
         </div>
     </footer>
+
 </body>
 </html>
-```
-## style.css:
-```
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+
+styles.css
+
+ {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-header, footer {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Logo Section */
-.logo {
+/* Header Section */
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center; /* Center the logo */
-    padding: 20px;
+    background-color: #ffcc00;
+    padding: 10px 20px;
 }
 
 .logo img {
-    max-width: 450px; /* Adjust the logo size as needed */
-    height: auto;
+    max-height: 60px;
 }
 
-/* Navigation Styling */
-nav {
-    background-color: #000; /* Black background */
-    display: flex;
-    justify-content: center; /* Center the content inside the nav */
-    border-radius: 10px; /* Rounded corners */
-}
-
-nav ul {
+.nav-menu {
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
+    gap: 15px;
 }
 
-nav li {
-    flex: none; /* Do not stretch menu items */
+.nav-menu li {
+    display: inline;
 }
 
-nav a {
-    display: block;
+.nav-menu a {
     text-decoration: none;
-    color: #fff; /* White text color */
-    padding: 10px 20px;
-    text-align: center;
-    transition: background-color 0.3s;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-    background-color: #333; /* Slightly darker hover effect */
+.nav-menu a:hover {
+    color: #0073e6;
 }
 
-/* Full-width Black Box Stretch */
-header {
-    width: 100%;
-}
-
+/* Main Section */
 main {
     padding: 20px;
+    background-color: #ffffff;
 }
 
-/* Promotional Banner */
-.promo-banner {
-    background: url("food.jpg") center/cover no-repeat;
-    color: #fff;
+/* Promo Section */
+.promo {
     text-align: center;
-    padding: 50px 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
 }
 
-/* Content Columns */
-.content-columns {
+.promo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.promo h1 {
+    font-size: 2.5em;
+    color: #444;
+}
+
+.promo p {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Three Columns Section */
+.three-columns {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .column {
     flex: 1;
-    background-color: #ffcd7c;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .column img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.column h3 {
+.column h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.column p {
+    color: #777;
     margin-top: 10px;
-    font-size: 1.2em;
 }
 
-.column a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #0066cc;
-    transition: color 0.3s;
-}
-
-.column a:hover {
-    color: #004d99;
-}
-
-/* Footer */
+/* Footer Section */
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-}
-
-.footer-logo img {
-    width: 30px;
-}
-
-.footer-text {
-    display: flex;
     align-items: center;
-    color: #777;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
 }
+
+.footer-left img {
+    max-height: 40px;
+}
+
+.footer-right p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
 ```
 
 ## OUTPUT:
-![Screenshot 2024-10-27 140016](https://github.com/user-attachments/assets/4fb0d19c-3ba7-4724-9c0c-4ec891ed919b)
+![Screenshot (4)](https://github.com/user-attachments/assets/4b0a6dc6-ded1-4824-b9c6-dc19ce3ea696)
 
-![Screenshot 2024-10-27 140026](https://github.com/user-attachments/assets/b302f576-b3fd-412c-be2d-7fa4c77644c9)
-
-![Screenshot 2024-10-27 141602](https://github.com/user-attachments/assets/89503e2d-7eb2-4086-b4bd-780fe7d87199)
 
 ## RESULT:
 The program for designing software company website using HTML and CSS is completed successfully.
